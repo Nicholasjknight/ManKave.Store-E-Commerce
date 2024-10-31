@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/Man Kave logo 2t (1).png" type="image/x-icon">
+    <title>Man Kave</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+</head>
+<body>
+
+<!-- HEADER START -->
+<header class="main-header">
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-row">
+                <div class="col-left modified-left-layout">
+                    <!-- Left-aligned content -->
+                    <ul class="service-links">
+                        <li><a href="#">Customer Care</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-right">
+                    <!-- Right-aligned content -->
+                    <ul class="account-links">
+                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="register.html">Join Free</a></li>
+                        <li><a href="account.html">Your Account</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container">
+            <div class="header-row">
+                <!-- Logo Section - 10% Width -->
+                <div class="col-logo">
+                    <a href="index.html">
+                        <img src="./images/Man Kave logo 2t (1).png" alt="Man Kave Logo" class="logo-image">
+                    </a>
+                </div>
+
+                <!-- Search Section with Dropdown Menu - Expands to take up available space -->
+                <div class="col-search">
+                    <form class="search-form">
+                        <select class="category-dropdown">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="books">Books</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="furniture">Furniture</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <input type="text" placeholder="Search" class="search-input">
+                        <button type="submit" class="search-button"><i class="icon-search"></i>Search</button>
+                    </form>
+                </div>
+
+                <!-- Cart Section - 10% Width -->
+                <div class="col-cart">
+                    <div class="cart-summary">
+                        <img src="images/cart-placeholder.png" alt="cart" class="cart-icon">
+                        <span class="cart-count">2</span>
+                        <span>Items</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</header>
+
+<!-- NAVIGATION MENU -->
+<nav class="main-nav">
+    <!-- Hamburger Menu for opening the sidebar -->
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <ul class="menu-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Offers</a></li>
+    </ul>
+</nav>
+
+<!-- Sidebar for categories (initially hidden) -->
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <span>Hello, Nicholas</span>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><strong>Trending</strong></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">New Releases</a></li>
+        <li><a href="#">Movers & Shakers</a></li>
+        
+        <li><strong>Digital Content & Devices</strong></li>
+        <li><a href="#">Prime Video</a></li>
+        <li><a href="#">Amazon Music</a></li>
+        <li><a href="#">Kindle E-readers & Books</a></li>
+
+        <li><strong>Shop by Department</strong></li>
+        <li><a href="#">Clothing, Shoes, Jewelry & Watches</a></li>
+        <li><a href="#">Whole Foods Market</a></li>
+        <li><a href="#">Household Essentials</a></li>
+        <!-- Add more items as necessary -->
+    </ul>
+</div>
+<!-- MAIN CONTENT START -->
+<div class="main-content">
+<!-- Carousel / Banner Section -->
+<section class="carousel-section">
+    <div class="carousel">
+        <img src="images/03d1d2b6-f304-4716-a8a8-f9194e4ebe17.png" alt="Banner Image 1">
+        <img src="images/0a16f6c8-37ca-4c95-b001-bbd417f3c2b7.png" alt="Banner Image 2">
+        <img src="images/190a3ecc-4d19-424a-9f4a-70fe57516c2c.png" alt="Banner Image 3">
+    </div>
+</section>
+<div id="product-list">
+    <!-- Products will be dynamically inserted here -->
+</div>
+
+
+
+    <!-- Product Recommendations -->
+    <section class="product-recommendations">
+        <div class="product-section">
+            <h2>Pick up where you left off</h2>
+            <div class="product-grid">
+                <div class="product-item"><img src="images/product1.jpg" alt="Product 1"><p>Logitech G502 X Lightspeed</p></div>
+                <div class="product-item"><img src="images/product2.jpg" alt="Product 2"><p>Logitech G203 Wired</p></div>
+                <div class="product-item"><img src="images/product3.jpg" alt="Product 3"><p>Logitech G305 Lightspeed</p></div>
+                <div class="product-item"><img src="images/product4.jpg" alt="Product 4"><p>Logitech G602 Wireless</p></div>
+            </div>
+        </div>
+        
+        <div class="product-section">
+            <h2>Keep shopping for</h2>
+            <div class="product-grid">
+                <div class="product-item"><img src="images/product5.jpg" alt="Product 5"><p>Roller window shades</p></div>
+                <div class="product-item"><img src="images/product6.jpg" alt="Product 6"><p>Clothes dryer</p></div>
+                <div class="product-item"><img src="images/product7.jpg" alt="Product 7"><p>Photographic studio</p></div>
+            </div>
+        </div>
+        
+        <div class="product-section">
+            <h2>Related to items you've saved</h2>
+            <div class="product-grid">
+                <div class="product-item"><img src="images/product8.jpg" alt="Product 8"><p>Neck massager</p></div>
+                <div class="product-item"><img src="images/product9.jpg" alt="Product 9"><p>Portable heater</p></div>
+                <div class="product-item"><img src="images/product10.jpg" alt="Product 10"><p>Electric kettle</p></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <!-- Top section with link groups -->
+    <div class="footer-top">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Get to Know Us</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Amazon Newsletter</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Press Center</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Make Money with Us</h4>
+                <ul>
+                    <li><a href="#">Sell on Our Site</a></li>
+                    <li><a href="#">Affiliate Marketing</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Become a Delivery Partner</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Amazon Payment Products</h4>
+                <ul>
+                    <li><a href="#">Amazon Visa</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Amazon Credit</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom section with logo, language & country selection, and legal links -->
+    <div class="footer-bottom">
+        <div class="footer-logo">
+            <a href="#"><img src="images/Man Kave logo 2t (1).png" alt="Logo"></a>
+        </div>
+        <div class="footer-settings">
+            <a href="#">English</a> | <a href="#">United States</a>
+        </div>
+    </div>
+
+    <!-- Legal links at the very bottom -->
+    <div class="footer-legal">
+        <ul>
+            <li><a href="#">Conditions of Use</a></li>
+            <li><a href="#">Privacy Notice</a></li>
+            <li><a href="#">Interest-Based Ads</a></li>
+            <li>&copy; 2024 YourCompany, Inc.</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
